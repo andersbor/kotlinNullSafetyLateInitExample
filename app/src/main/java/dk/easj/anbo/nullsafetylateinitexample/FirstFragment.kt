@@ -2,10 +2,10 @@ package dk.easj.anbo.nullsafetylateinitexample
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import dk.easj.anbo.nullsafetylateinitexample.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
@@ -24,6 +24,7 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //val a = address
         address = "Roskilde"
         binding.textviewFirst.text = address
 
@@ -40,7 +41,8 @@ class FirstFragment : Fragment() {
 
     private fun doIt() {
         //val name: String = "Anders"
-        val name: String = "kk" // Null can not be a value of a non-null type
+        var name: String = "" // Null can not be a value of a non-null type
+        // name = null
         val length: Int = name.length
         Log.d("APPLE", length.toString())
 
@@ -59,7 +61,7 @@ class FirstFragment : Fragment() {
         // so-called Elvis operator (Elvis Presley hair style)
         // if (name2 == null) length3=-1 else length3=name2.length
 
-        val name2a: Int? = name2?.length
+        val name2a: Int = name2!!.length
         // !! convert from String? to String
         // !! programmer responsibility: Risk of NullPointerException
 
