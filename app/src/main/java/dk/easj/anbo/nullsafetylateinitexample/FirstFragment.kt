@@ -42,7 +42,7 @@ class FirstFragment : Fragment() {
     private fun doIt() {
         //val name: String = "Anders"
         var name: String = "" // Null can not be a value of a non-null type
-        // name = null
+        //name = null
         val length: Int = name.length
         Log.d("APPLE", length.toString())
 
