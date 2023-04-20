@@ -61,10 +61,10 @@ class FirstFragment : Fragment() {
         // so-called Elvis operator (Elvis Presley hair style)
         // if (name2 == null) length3=-1 else length3=name2.length
 
-        val name2a: Int = name2!!.length
+        val length4: Int = name2!!.length
         // !! convert from String? to String
         // !! programmer responsibility: Risk of NullPointerException
 
-        binding.textviewFirst.text = "name2=$name2 length2=$length2 length3=$length3 name2a=$name2a"
+        binding.textviewFirst.text = "name2=$name2 length2=$length2 length3=$length3 length4=$length4"
     }
 }
